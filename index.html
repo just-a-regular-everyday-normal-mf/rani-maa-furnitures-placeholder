@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rani Maa Furnitures | Website Coming Soon</title>
+
+    <meta name="description"
+          content="Rani Maa Furnitures - Our new website is coming soon. 50 years of craftsmanship, furniture made for generations.">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+        :root {
+            --dark: #21150e;
+            --dark-2: #302016;
+            --cream: #f6efe5;
+            --muted: #cdbdad;
+            --gold: #c49b62;
+            --gold-light: #dfbd87;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--dark);
+            color: var(--cream);
+        }
+
+        /* =========================================================
+           MAIN
+        ========================================================= */
+
+        .page {
+            min-height: 100vh;
+            min-height: 100svh;
+
+            position: relative;
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                radial-gradient(
+                    circle at 75% 25%,
+                    rgba(173, 119, 69, 0.17),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 15% 85%,
+                    rgba(116, 75, 43, 0.20),
+                    transparent 32%
+                ),
+                linear-gradient(
+                    125deg,
+                    #1b100a 0%,
+                    #352116 50%,
+                    #21140c 100%
+                );
+        }
+
+        /* =========================================================
+           WOOD GRAIN
+        ========================================================= */
+
+        .page::before {
+            content: "";
+            position: absolute;
+            inset: -25%;
+
+            opacity: 0.13;
+
+            background:
+                repeating-radial-gradient(
+                    ellipse at 25% 50%,
+                    transparent 0,
+                    transparent 35px,
+                    rgba(215, 172, 118, 0.45) 37px,
+                    transparent 40px
+                );
+
+            transform: rotate(-12deg) scale(1.2);
+            pointer-events: none;
+        }
+
+        .page::after {
+            content: "";
+
+            position: absolute;
+            width: 650px;
+            height: 650px;
+
+            right: -350px;
+            bottom: -350px;
+
+            border-radius: 50%;
+
+            background: rgba(196, 155, 98, 0.12);
+            filter: blur(20px);
+
+            pointer-events: none;
+        }
+
+        /* =========================================================
+           CONTENT
+        ========================================================= */
+
+        .content {
+            position: relative;
+            z-index: 2;
+
+            width: min(1000px, 92%);
+
+            text-align: center;
+
+            padding: 60px 20px 90px;
+        }
+
+        /* =========================================================
+           LOGO / BRAND
+        ========================================================= */
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 18px;
+
+            margin-bottom: 55px;
+
+            animation: fadeDown 0.9s ease both;
+        }
+
+        .brand-line {
+            width: 45px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .brand-name {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(27px, 4vw, 38px);
+            font-weight: 600;
+
+            letter-spacing: 0.12em;
+        }
+
+        .brand-sub {
+            margin-top: -2px;
+
+            font-size: 8px;
+            font-weight: 600;
+
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
+
+            color: var(--gold);
+        }
+
+        /* =========================================================
+           EYEBROW
+        ========================================================= */
+
+        .eyebrow {
+            margin-bottom: 15px;
+
+            color: var(--gold);
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+
+            animation: fadeUp 0.9s ease 0.15s both;
+        }
+
+        /* =========================================================
+           MAIN COMING SOON MESSAGE
+        ========================================================= */
+
+        .headline-small {
+            font-family: "Cormorant Garamond", serif;
+
+            color: var(--cream);
+
+            font-size: clamp(23px, 4vw, 34px);
+            font-weight: 500;
+
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+
+            animation: fadeUp 0.9s ease 0.25s both;
+        }
+
+        h1 {
+            margin-top: 4px;
+            margin-bottom: 25px;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(70px, 13vw, 145px);
+            line-height: 0.82;
+
+            font-weight: 600;
+
+            letter-spacing: -0.045em;
+
+            color: var(--cream);
+
+            animation: fadeUp 0.9s ease 0.35s both;
+        }
+
+        h1 span {
+            display: block;
+
+            color: var(--gold-light);
+
+            font-style: italic;
+        }
+
+        /* =========================================================
+           EXPLANATION
+        ========================================================= */
+
+        .description {
+            width: min(650px, 100%);
+            margin: 0 auto;
+
+            color: var(--muted);
+
+            font-size: clamp(14px, 2vw, 16px);
+            line-height: 1.8;
+
+            animation: fadeUp 0.9s ease 0.5s both;
+        }
+
+        .description strong {
+            color: var(--cream);
+            font-weight: 600;
+        }
+
+        /* =========================================================
+           DIVIDER
+        ========================================================= */
+
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 17px;
+
+            margin: 38px auto;
+
+            animation: fadeUp 0.9s ease 0.6s both;
+        }
+
+        .divider-line {
+            width: min(110px, 20vw);
+            height: 1px;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(196, 155, 98, 0.7)
+            );
+        }
+
+        .divider-line.right {
+            background: linear-gradient(
+                90deg,
+                rgba(196, 155, 98, 0.7),
+                transparent
+            );
+        }
+
+        .diamond {
+            width: 7px;
+            height: 7px;
+
+            background: var(--gold);
+
+            transform: rotate(45deg);
+        }
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact {
+            animation: fadeUp 0.9s ease 0.7s both;
+        }
+
+        .contact-label {
+            margin-bottom: 9px;
+
+            color: #a99582;
+
+            font-size: 10px;
+            font-weight: 600;
+
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+
+        .contact a {
+            display: inline-block;
+
+            color: var(--cream);
+
+            font-size: 15px;
+            font-weight: 600;
+
+            text-decoration: none;
+
+            padding-bottom: 3px;
+
+            border-bottom: 1px solid rgba(196, 155, 98, 0.45);
+
+            transition:
+                color 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .contact a:hover {
+            color: var(--gold-light);
+            border-color: var(--gold-light);
+        }
+
+        .location {
+            margin-top: 17px;
+
+            color: #887668;
+
+            font-size: 11px;
+
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        /* =========================================================
+           50 YEARS BADGE
+        ========================================================= */
+
+        .heritage {
+            position: absolute;
+
+            left: 45px;
+            bottom: 45px;
+
+            z-index: 3;
+
+            width: 105px;
+            height: 105px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(196, 155, 98, 0.35);
+
+            border-radius: 50%;
+
+            color: var(--gold);
+
+            transform: rotate(-8deg);
+
+            animation: fadeIn 1.2s ease 1s both;
+        }
+
+        .heritage::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 6px;
+
+            border: 1px solid rgba(196, 155, 98, 0.18);
+
+            border-radius: 50%;
+        }
+
+        .heritage-number {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 31px;
+            font-weight: 700;
+
+            line-height: 0.9;
+        }
+
+        .heritage-text {
+            margin-top: 5px;
+
+            font-size: 7px;
+            font-weight: 700;
+
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+
+            text-align: center;
+        }
+
+        /* =========================================================
+           DECORATIVE CHAIR
+        ========================================================= */
+
+        .chair {
+            position: absolute;
+
+            right: 7%;
+            bottom: 3%;
+
+            width: 180px;
+            height: 220px;
+
+            opacity: 0.28;
+
+            pointer-events: none;
+        }
+
+        .chair .back {
+            position: absolute;
+
+            width: 120px;
+            height: 130px;
+
+            left: 30px;
+            top: 10px;
+
+            border: 5px solid rgba(196, 155, 98, 0.7);
+
+            border-bottom: 0;
+
+            border-radius: 65px 65px 5px 5px;
+        }
+
+        .chair .seat {
+            position: absolute;
+
+            left: 20px;
+            top: 130px;
+
+            width: 140px;
+            height: 20px;
+
+            border-radius: 5px;
+
+            background: rgba(196, 155, 98, 0.7);
+        }
+
+        .chair .leg {
+            position: absolute;
+
+            width: 7px;
+            height: 75px;
+
+            top: 145px;
+
+            background: rgba(196, 155, 98, 0.7);
+        }
+
+        .chair .leg.one {
+            left: 35px;
+            transform: rotate(7deg);
+        }
+
+        .chair .leg.two {
+            right: 35px;
+            transform: rotate(-7deg);
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        .footer {
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 22px;
+
+            z-index: 4;
+
+            text-align: center;
+
+            color: #746254;
+
+            font-size: 9px;
+
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        /* =========================================================
+           ANIMATIONS
+        ========================================================= */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 0.65;
+            }
+        }
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 700px) {
+
+            .content {
+                padding: 40px 15px 90px;
+            }
+
+            .brand {
+                margin-bottom: 45px;
+            }
+
+            .brand-line {
+                width: 25px;
+            }
+
+            .headline-small {
+                font-size: 19px;
+                letter-spacing: 0.1em;
+            }
+
+            h1 {
+                font-size: clamp(62px, 18vw, 90px);
+                margin-bottom: 25px;
+            }
+
+            .description {
+                font-size: 14px;
+                line-height: 1.75;
+            }
+
+            .heritage {
+                left: 18px;
+                bottom: 18px;
+
+                width: 75px;
+                height: 75px;
+            }
+
+            .heritage-number {
+                font-size: 23px;
+            }
+
+            .heritage-text {
+                font-size: 5px;
+            }
+
+            .chair {
+                right: -70px;
+                bottom: -25px;
+
+                transform: scale(0.7);
+
+                opacity: 0.18;
+            }
+
+            .footer {
+                bottom: 8px;
+                font-size: 7px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="page">
+
+    <!-- Decorative furniture -->
+    <div class="chair" aria-hidden="true">
+        <div class="back"></div>
+        <div class="seat"></div>
+        <div class="leg one"></div>
+        <div class="leg two"></div>
+    </div>
+
+    <!-- 50 Years badge -->
+    <div class="heritage">
+        <div class="heritage-number">50</div>
+        <div class="heritage-text">
+            Years of<br>
+            Craftsmanship
+        </div>
+    </div>
+
+    <section class="content">
+
+        <!-- Brand -->
+        <div class="brand">
+
+            <div class="brand-line"></div>
+
+            <div>
+                <div class="brand-name">RANI MAA</div>
+                <div class="brand-sub">Furnitures</div>
+            </div>
+
+            <div class="brand-line"></div>
+
+        </div>
+
+        <!-- Main message -->
+        <div class="eyebrow">
+            Our new website is
+        </div>
+
+        <div class="headline-small">
+            Officially
+        </div>
+
+        <h1>
+            Coming
+            <span>Soon.</span>
+        </h1>
+
+        <p class="description">
+            We're currently putting the finishing touches on the
+            <strong>official Rani Maa Furnitures website.</strong>
+            <br>
+            Our new digital home will be here soon - bringing
+            five decades of furniture craftsmanship online.
+        </p>
+
+        <!-- Divider -->
+        <div class="divider">
+            <div class="divider-line"></div>
+            <div class="diamond"></div>
+            <div class="divider-line right"></div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact">
+
+            <div class="contact-label">
+                Need furniture before then?
+            </div>
+
+            <a href="https://wa.me/8668468744" target="_blank">
+                Call or WhatsApp us
+            </a>
+
+            <div class="location">
+                Ulhasnagar · Thane · Maharashtra
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="footer">
+        Rani Maa Furnitures · Crafted for generations
+    </div>
+
+</main>
+
+</body>
+</html>
